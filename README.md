@@ -37,11 +37,11 @@ Explain what you have done here and why...
 
 Based on my limited experience with the framework in recent times, below is how resolved the assessment.
 
-###Task #1: Add missing requirement #4
+### Task #1: Add missing requirement #4
 Quite straight forward, kept it to the bare minimum of being able to edit.
 	- a form was added with a text input and save button for each item
 	
-###Task #2: Add sufficient test coverage
+### Task #2: Add sufficient test coverage
 Was attempted using, but not limited to, the documentation here:
 	- https://www.npmjs.com/package/istanbul#getting-started
 	- https://github.com/gotwarlost/istanbul/issues/262
@@ -49,14 +49,14 @@ Was attempted using, but not limited to, the documentation here:
 To run the test, the folling command can be used after you CD to the root directory:
 	- npm test --coverage
 	
-###Task #3: Docker
+### Task #3: Docker
 Was accomplished using, but not limited to, the following documentation:
 	- https://docs.docker.com/get-started/ (using node syntax)
 	- https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
 
 After completing #1, first deployment to Docker (#3) was done by following above documention. Subsequent deployments were done after app was changed.
 
-###Other
+### Other
 An initial attempt to add tests was done using Mocha. Automated updating of the package.json file was failing for some strange reason, so the dependency was added manually. Similarly, the HTML encoding dependency to remedy the XSS vulnerability was added manually.
 
 XSS vulnerability is caused by the lack of encoding of the input data. A script (<script type="text/javascript">alert('test')</script>) was added as a ToDo item. 
