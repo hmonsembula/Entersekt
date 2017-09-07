@@ -2,6 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
+const Encoder = require('node-html-encoder').Encoder;
+const encoder = new Encoder('entity');
+
 const app = express();
 
 let todolist = [];
@@ -13,8 +16,15 @@ app.get('/todo', function(req, res) {
 
 /* Adding an item to the to do list */
 .post('/todo/add/', urlencodedParser, function(req, res) {
-    if (req.body.newtodo != '') {
-        todolist.push(req.body.newtodo);
+    if (req.body.newtodo != '') {		
+        todolist.push(encoder.htmlEncode(req.body.newtodo));//XSS vulnerability
+    }
+    res.redirect('/todo');
+})
+/* Edit an item in the to do list */
+.post('/todo/edit/:id', urlencodedParser, function(req, res) {
+    if (req.params.id != '' && req.body.edittodo !='') {
+        todolist[req.params.id] = encoder.htmlEncode(req.body.edittodo);
     }
     res.redirect('/todo');
 })
@@ -33,3 +43,5 @@ app.get('/todo', function(req, res) {
 })
 
 .listen(8080);
+
+/*Missing functionality*/
