@@ -45,8 +45,8 @@ Quite straight forward, kept it to the bare minimum of being able to edit.
 Was attempted using, but not limited to, the documentation here:
 	- https://www.npmjs.com/package/istanbul#getting-started
 	- https://github.com/gotwarlost/istanbul/issues/262
-	- https://www.npmjs.com/package/assert
-To run the test, the folling command can be used after you CD to the root directory:
+	- https://www.npmjs.com/package/assert.
+To run the test, the following command can be used after you CD to the root directory:
 	- npm test --coverage
 	
 ### Task #3: Docker
@@ -54,7 +54,7 @@ Was accomplished using, but not limited to, the following documentation:
 	- https://docs.docker.com/get-started/ (using node syntax)
 	- https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
 
-After completing #1, first deployment to Docker (#3) was done by following above documention. Subsequent deployments were done after app was changed.
+After completing #1, first deployment to Docker (#3) was done by following above documention. Subsequent deployments were done after app changes.
 
 ### Other
 An initial attempt to add tests was done using Mocha. Automated updating of the package.json file was failing for some strange reason, so the dependency was added manually. Similarly, the HTML encoding dependency to remedy the XSS vulnerability was added manually.
