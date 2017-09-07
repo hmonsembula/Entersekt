@@ -35,7 +35,7 @@ Visit http://localhost:8080 in your browser
 ### Solution
 Explain what you have done here and why...
 
-Based on my limited experience with the framework in recent times, below is how resolved the assessment.
+Based on my limited exposure to the framework in recent times, below is how I resolved the assessment.
 
 ### Task #1: Add missing requirement #4
 Quite straight forward, kept it to the bare minimum of being able to edit.
